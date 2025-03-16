@@ -32,7 +32,8 @@
 #define WIFI_AUTH_MODE WIFI_AUTH_WPA2_PSK 
 
 /* Maximum number of stations that can be connected to the network. */
-#define MAX_STA_CONN 1
+/* There are two possible connections, the remote switch and the GUI. */
+#define MAX_STA_CONN 2
 
 /* Socket port that client and server will use stablish the comunciation. */
 #define TCP_IP_PORT 7777

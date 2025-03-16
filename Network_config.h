@@ -52,6 +52,8 @@ typedef enum
 {
   /* Light effect where it will set the LED in the opossite state that was before. */
   TOOGLE_LED,
+  /* Light effect where it will set the PWM to controll the brightes of the LED light. */
+  SET_PWM,
   /* Last enumerate always, indicates the number of elements. Do not delete */
   NUM_OF_LIGHT_EFFECTS,
 } Light_effect;
@@ -65,6 +67,10 @@ typedef struct
   LED_ID ID;
   /* Actions to set to the LED. */
   Light_effect action;
+  /* If action is SET_PWM, it is the value of the PWM in terms of percentage to set to
+   * the LED.
+   */
+  uint8_t pwm;
 } Command_frame;
 
 #endif /* NETWORK_CONFIG_H_ */
